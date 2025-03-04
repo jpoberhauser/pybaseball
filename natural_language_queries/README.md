@@ -38,27 +38,27 @@ con = duckdb.connect('baseball_stats.db')
 ```
 ## Example: Collecting and storing a season of Statcast data
 
-```
+```python
 def store_statcast_data(year):
     # Fetch data month by month to manage memory
     for month in range(1, 13):
     start_date = f"{year}-{month:02d}-01"
     end_date = f"{year}-{month:02d}-28" # Simplified for example
 
-df = statcast(start_dt=start_date, end_dt=end_date)
+    df = statcast(start_dt=start_date, end_dt=end_date)
 
-# Store in DuckDB
-con.execute("""
-CREATE TABLE IF NOT EXISTS statcast_data AS
-SELECT FROM df WHERE 1=0
-""")
-con.execute("INSERT INTO statcast_data SELECT FROM df")
+    # Store in DuckDB
+    con.execute("""
+    CREATE TABLE IF NOT EXISTS statcast_data AS
+    SELECT FROM df WHERE 1=0
+    """)
+    con.execute("INSERT INTO statcast_data SELECT FROM df")
 ```
 
 ## Example: Storing batting statistics
 
 
-```
+```python
 def store_batting_stats(year):
     df = batting_stats_range(f"{year}-01-01", f"{year}-12-31")
     con.execute("""
