@@ -4,7 +4,9 @@ Baseball data scraping and analysis tools in python
 
 This repo builds on top of pybaseball scrapers to store and query baseball statistics with natural language powered by LLMs. 
 
-For example in the sandbox.ipynb you can find a sample question : `input_q = 'Who was the best overall batter with more than 5 games played in the month'` 
+For example in the sandbox.ipynb you can find a sample question : 
+
+`input_q = input_q = 'Who was the best overall batter with more than 5 games played in the 2024 season'` 
 
 and the response:
 
