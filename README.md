@@ -10,11 +10,12 @@ For example in the sandbox.ipynb you can find a sample question :
 
 and the response:
 
-```
+
 | Name         | mlbID  | Games_Played | Total_PA | Avg_BA | Avg_OBP  | Avg_SLG | Avg_OPS  |
 |-------------|--------|-------------|----------|--------|----------|---------|----------|
 | Aaron Judge | 592450 | 154.0       | 685.0    | 0.329  | 0.465833 | 0.717   | 1.182833 |
-```
+
+
 This also returns the sql code so you explore exactly where the LLM found the answer, filter, and make sure the numbers are accurate. 
 
 ## Overview
