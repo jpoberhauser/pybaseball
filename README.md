@@ -4,6 +4,17 @@ Baseball data scraping and analysis tools in python
 
 This repo builds on top of pybaseball scrapers to store and query baseball statistics with natural language powered by LLMs. 
 
+For example in the sandbox.ipynb you can find a sample question : `input_q = 'Who was the best overall batter with more than 5 games played in the month'` 
+
+and the response:
+
+```
+| Name         | mlbID  | Games_Played | Total_PA | Avg_BA | Avg_OBP  | Avg_SLG | Avg_OPS  |
+|-------------|--------|-------------|----------|--------|----------|---------|----------|
+| Aaron Judge | 592450 | 154.0       | 685.0    | 0.329  | 0.465833 | 0.717   | 1.182833 |
+```
+This also returns the sql code so you explore exactly where the LLM found the answer, filter, and make sure the numbers are accurate. 
+
 ## Overview
 
 `pybaseball` is a Python package for baseball data analysis. This package scrapes Baseball Reference, Baseball Savant, and FanGraphs so you don't have to. The package retrieves statcast data, pitching stats, batting stats, division standings/team records, awards data, and more. Data is available at the individual pitch level, as well as aggregated at the season level and over custom time periods. See the [docs](https://github.com/jldbc/pybaseball/tree/master/docs) for a comprehensive list of data acquisition functions.
